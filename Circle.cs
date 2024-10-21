@@ -18,5 +18,11 @@
             double area = Math.Round(Radie * Radie * Pi);
             return area;
         }
+
+        public double SphereArea()
+        {
+            double area = Math.Round(4 * Radie * Radie * Pi);
+            return area;
+        }
     }
 }
