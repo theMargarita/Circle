@@ -3,7 +3,21 @@
     internal class Circle
     {
         public float Pi = 3.1415f;
-        public double Radie { get; set; }
+        private double Radie;
+
+        //honeslty this is unnecessary but ok 
+        public double radie
+        {
+            get { return radie; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Radius can not be negative.");
+                }
+                radie = value;
+            }
+        }
 
         //constructor with one parameter
         public Circle(float radie)
